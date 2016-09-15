@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>NIE IEEE Student Branch</title>
+  {% load staticfiles %}
+  <link rel="shortcut icon" href={% static "resized_logo3.png" %} />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  {% load staticfiles %}
+  <link href= {% static "css/materialize.css" %} type="text/css" rel="stylesheet" media="screen,projection"/>
+  {% load staticfiles %}
+  <link href={% static "css/style.css" %} type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/js/materialize.js"></script>
+  <script src="/static/js/init.js"></script>
+ <!--To be added to a script file-->
+  <script>
+	$(document).ready(function(){
+			$("#loader").fadeOut("slow", function(){
+				$(this).remove();});
+			$('#content-of-the-page').show();
+			document.getElementById('content-of-the-page').style.opacity = 1;
+			$(".dropdown-button").dropdown({belowOrigin : true, hover : true});
+	$('.modal-trigger').leanModal();
+	$('.collapsible').collapsible({
+		accordion : false
+		});
+	});
+	
+  </script>
+  <style>
+	 .slider .slides {
+		     background-color: transparent;
+		     margin: 0;
+		     height: 400px;
+	 }
+
+	 .slider .slides li .card {
+		     height: 100%;
+		     width: 100%;
+		     background-position: center;
+		     background-size:100% auto;
+		     background-repeat: no-repeat;
+	 }
+
+
+  </style>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1568176253492502";
+	  fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="loader" class="progress">
+	<div id="status" class="indeterminate"></div>
+</div>
+
+ <div class="navbar-fixed">
+
+<!--dropdown content for navigation bars-->
+  <ul id="nisbAG" class="dropdown-content">
+	<li><a href="/wie">WIE</a></li>
+	<li><a href="/cs">Computer Society</a></li>
+	<li><a href="/fg">Focus Groups</a></li>
+  </ul>
+
+
+  <!--for small screens (mobile)-->
+  <ul id="nisbAG_mobile" class="dropdown-content">
+        <li><a href="/wie">WIE</a></li>
+        <li><a href="/cs">Computer Society</a></li>
+        <li><a href="/fg">Focus Groups</a></li>
+  </ul>
+
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+	    <a id="logo-container" href="/" class="brand-logo"><img class="hide-on-med-and-down" src="/static/resized_logo2.png"></a>
+	    <a id="logo-container" href="/" class="brand-logo"><img class="hide-on-large-only" src="/static/resized_logo3.png"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+	<li><a href="/events">Events</a></li>
+	<li><a class="dropdown-button" href="#" data-activates="nisbAG">Affinity Groups</a></li>
+	<li class="active"><a href="/about">About</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
+        <li class="active"><a class="dropdown-button" href="#" data-activates="nisbAG_mobile">Affinity Groups</a></li>
+        <li class="active"><a href="/about">About</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+ </div>
+
+<div id='content-of-the-page' style="display:none; opacity:0.5;">
+  <div id="index-banner">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center cyan-text text-accent-4">NISB</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">NIE IEEE Student Branch</h5>
+        </div>
+        <div class="row center">
+
+		<!--link to google form -->
+          <a href="" id="download-button" class="btn-large waves-effect waves-light cyan lighten-1">Join Us</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+
+      <div class="container">
+        <div class="row center">
+		<ul class="collapsible" data-collapsible="expandable">
+			<li>
+			<div class="collapsible-header">IEEE</div>
+			<div class="collapsible-body"><blockquote><p>IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly cited publications, conferences, technology standards, and professional and educational activities. IEEE is the trusted “voice” for engineering, computing, and technology information around the globe.  <p>
+					<a href="www.ieee.org/about/index.html" target="_blank">More Info<i class="material-icons">open_in_new</i></a>
+			</blockquote>
+			</div>
+			</li>
+			<li>
+			<div class="collapsible-header">R10</div>
+			<div class="collapsible-body"><blockquote><p>The IEEE Region 10, also sometimes referred as the Asia Pacific Region, comprises of 57 Sections, 6 Councils, 17 Sub-sections, 515 Chapters, 60 Affinity Groups and 958 Student Branches. It covers a geographical area stretching from South Korea and Japan in the north-east to New Zealand in the south, and Pakistan in the west. With a membership of 107,154, it is one of the largest regions in IEEE.</p>
+					<a href="www.ieeer10.org/about.html" target="_blank">More Info<i class="material-icons">open_in_new</i></a>
+			</blockquote>
+			</div>
+			</li>
+			<li>
+			<div class="collapsible-header">Bangalore Section</div>
+			<div class="collapsible-body"><blockquote><p>IEEE Bangalore was established in 1977 and is one of the vibrant Sections in India. Over the years the strength of the section has grown steadily and currently the Section membership stands close to 8000. This membership is spread across various sectors and is a nice blend of Industry, Academia and Research organizations.</p>
+					<a href="ieeebangalore.org" target="_blank">More Info<i class="material-icons">open_in_new</i></a>
+			</blockquote>
+			</div>
+			</li>
+			<li>
+			<div class="collapsible-header active">NISB</div>
+			<div class="collapsible-body">The NIE IEEE STUDENT BRANCH (NISB) is a student organization affiliated to Institute of Electrical and Electronics Engineers (IEEE), based at The National Institute of Engineering, Mysore. NIE IEEE student branch provides platform to its members to explore new technology and have fun learning in their field of interests to have a career in engineering. NISB is the trusted “voice” for engineering, computing and advancing technology. Apart from membership benefits NISB extend opportunities to student members to build network around the world.</div>
+			</li>
+			<li>
+			<div class="collapsible-header">FAQ</div>
+			<div class="collapsible-body">
+			
+				<ul class="collapsible" data-collapsible="expandable">
+				<li>
+				<div class="collapsible-header">Question 1</div>
+				<div class="collapsible-body">Anser1</div>
+				</li>
+				<li>
+				<div class="collapsible-header">Question2</div>
+				<div class="collapsible-body">Answer2</div>
+				</li>
+				<li>
+				<div class="collapsible-header">Question3</div>
+				<div class="collapsible-body">Answer3</div>
+				</li>
+				</ul>
+			</div>
+			</li>
+		</ul>
+		</ul>
+        </div>
+    <div class="parallax"><img src="/static/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+
+  <footer class="page-footer cyan">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.5086526056166!2d76.63912761433812!3d12.281494232968472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf6557e0c5950f%3A0x204cedf9d31f789e!2sNIE+Golden+Jubilee+Block!5e0!3m2!1sen!2sin!4v1467694354944" width="300" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">IEEE Websites</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.ieee.org/">IEEE Official Website</a></li>
+            <li><a class="white-text" href="https://www.ieeer10.org/">IEEE R10</a></li>
+            <li><a class="white-text" href="https://ieeebangalore.org/">IEEE Bangalore Section</a></li>
+            <li><a class="white-text" href="https://www.computer.org">IEEE Computer Society</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+		  <li><div class="fb-like" data-href="https://www.facebook.com/nieieeestudentbranch" data-width="30" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div></li>
+	    <li><a href="https://twitter.com/niemysieee" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-dnt="true" data-show-count="false">Follow @niemysieee</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+	    <li><style>.ig-b- { display: inline-block; }
+.ig-b- img { visibility: hidden; }
+.ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+.ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+	.ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }</style>
+	    <a href="https://www.instagram.com/nie_ieee_student_branch/?ref=badge" class="ig-b- ig-b-v-24"><img src="//badges.instagram.com/static/images/ig-badge-view-24.png" alt="Instagram" /></a></li>
+	    <li><a class="white-text" href="mailto:nisb.ieee@gmail.com"><i class="tiny material-icons">email</i>Email Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/js/materialize.js"></script>
+  <script src="/static/js/init.js"></script> -->
+
+  </body>
+</html>
