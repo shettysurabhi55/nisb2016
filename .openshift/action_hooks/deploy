@@ -1,0 +1,5 @@
+if [ ! -d $OPENSHIFT_REPO_DIR/wsgi/static/admin ]; then
+mkdir $OPENSHIFT_REPO_DIR/wsgi/static/admin
+fi
+
+cp -r python/virtenv/lib/python2.7/site-packages/django/contrib/admin/static/admin/ $OPENSHIFT_REPO_DIR/wsgi/static/
